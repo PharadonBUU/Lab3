@@ -25,7 +25,14 @@ public class XoTest {
         String currentPlayer = "O";
         assertEquals(false, OXProgram.checkWin(table, currentPlayer));
     }
+    
+    @Test
+    public void testCheckWinRow1BY_O_output_true() {
+        String[] table = {"O", "O", "O", "4", "5", "6", "7", "8", "9"};
+        String currentPlayer = "O";
+        assertEquals(true, OXProgram.checkWin(table, currentPlayer));
 
+    }
 
     @BeforeAll
     public static void setUpClass() {
