@@ -12,41 +12,33 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  *
- * @author pondz
+ * @author informatics
  */
 public class XoTest {
-    
+
     public XoTest() {
     }
 
-    @org.junit.jupiter.api.BeforeAll
-    public static void setUpClass() throws Exception {
+    @Test
+    public void testCheckWinNoPlayBY_O() {
+        String[] table = {"1", "2", "3", "4", "5", "6", "7", "8", "9"};
+        String currentPlayer = "O";
+        assertEquals(false, OXProgram.checkWin(table, currentPlayer));
     }
 
-    @org.junit.jupiter.api.AfterAll
-    public static void tearDownClass() throws Exception {
-    }
 
-    @org.junit.jupiter.api.BeforeEach
-    public void setUp() throws Exception {
-    }
-
-    @org.junit.jupiter.api.AfterEach
-    public void tearDown() throws Exception {
-    }
-    
     @BeforeAll
     public static void setUpClass() {
     }
-    
+
     @AfterAll
     public static void tearDownClass() {
     }
-    
+
     @BeforeEach
     public void setUp() {
     }
-    
+
     @AfterEach
     public void tearDown() {
     }
