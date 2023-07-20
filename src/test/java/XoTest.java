@@ -76,6 +76,13 @@ public class XoTest {
     }
 
     @Test
+    public void testCheckWinDiagonalFromTopRightBY_O_output_true() {
+        String[] table = {"O", "X", "O", "X", "O", "X", "O", "X", "X"};
+        String currentPlayer = "O";
+        assertEquals(true, OXProgram.checkWin(table, currentPlayer));
+    }
+
+    @Test
     public void testDraw_output_true() {
         String[] table = {"O", "X", "X", "X", "O", "O", "X", "O", "O"};
         String currentPlayer = "O";
