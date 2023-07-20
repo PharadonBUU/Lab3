@@ -25,6 +25,9 @@ class OXProgram {
         if (checkCol2(table, currentPlayer)) {
             return true;
         }
+        if (checkCol3(table, currentPlayer)) {
+            return true;
+        }
 
         return false;
     }
@@ -44,9 +47,13 @@ class OXProgram {
     private static boolean checkCol1(String[] table, String currentPlayer) {
         return table[0].equals(currentPlayer) && table[3].equals(currentPlayer) && table[6].equals(currentPlayer);
     }
-    
+
     private static boolean checkCol2(String[] table, String currentPlayer) {
         return table[1].equals(currentPlayer) && table[4].equals(currentPlayer) && table[7].equals(currentPlayer);
+    }
+
+    private static boolean checkCol3(String[] table, String currentPlayer) {
+        return table[2].equals(currentPlayer) && table[5].equals(currentPlayer) && table[8].equals(currentPlayer);
     }
 
     static boolean checkDraw(String[] table, String currentPlayer) {
