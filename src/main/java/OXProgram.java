@@ -27,6 +27,8 @@ class OXProgram {
         }
         if (checkCol3(table, currentPlayer)) {
             return true;
+        }if(checkDiagonalTopLeft(table, currentPlayer)) {
+            return true;
         }
 
         return false;
@@ -54,6 +56,10 @@ class OXProgram {
 
     private static boolean checkCol3(String[] table, String currentPlayer) {
         return table[2].equals(currentPlayer) && table[5].equals(currentPlayer) && table[8].equals(currentPlayer);
+    }
+    
+    private static boolean checkDiagonalTopLeft(String[] table, String currentPlayer) {
+        return table[0].equals(currentPlayer) && table[4].equals(currentPlayer) && table[8].equals(currentPlayer);
     }
 
     static boolean checkDraw(String[] table, String currentPlayer) {
