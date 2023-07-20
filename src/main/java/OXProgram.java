@@ -19,6 +19,9 @@ class OXProgram {
         if (checkRow3(table, currentPlayer)) {
             return true;
         }
+        if (checkCol1(table, currentPlayer)) {
+            return true;
+        }
 
         return false;
     }
@@ -35,13 +38,17 @@ class OXProgram {
         return table[6].equals(currentPlayer) && table[7].equals(currentPlayer) && table[8].equals(currentPlayer);
     }
 
+    private static boolean checkCol1(String[] table, String currentPlayer) {
+        return table[0].equals(currentPlayer) && table[3].equals(currentPlayer) && table[6].equals(currentPlayer);
+    }
+
     static boolean checkDraw(String[] table, String currentPlayer) {
         if (checkRow1(table, currentPlayer)) {
             // If the current player has already won, it's not a draw
             return false;
-        }else if(checkRow2(table, currentPlayer)){
+        } else if (checkRow2(table, currentPlayer)) {
             return false;
-        }else if(checkRow3(table, currentPlayer)){
+        } else if (checkRow3(table, currentPlayer)) {
             return false;
         }
         // All cells are filled, and no player has won, so it's a draw

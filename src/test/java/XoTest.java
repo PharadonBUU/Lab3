@@ -48,6 +48,13 @@ public class XoTest {
     }
     
     @Test
+    public void testCheckWinCol1BY_O_output_true() {
+        String[] table = {"1", "2", "3", "X", "O", "X", "O", "O", "O"};
+        String currentPlayer = "O";
+        assertEquals(true, OXProgram.checkWin(table, currentPlayer));
+    }
+    
+    @Test
     public void testDraw_output_true() {
         String[] table = {"X", "X", "O", "O", "O", "X", "X", "O", "X"};
         String currentPlayer = "O";
