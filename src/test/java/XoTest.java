@@ -88,6 +88,13 @@ public class XoTest {
         String currentPlayer = "O";
         assertEquals(true, OXProgram.checkDraw(table, currentPlayer));
     }
+    
+    @Test
+    public void testCheckWinRow1BY_X_output_true() {
+        String[] table = {"X", "X", "X", "4", "5", "6", "7", "8", "9"};
+        String currentPlayer = "X";
+        assertEquals(true, OXProgram.checkWin(table, currentPlayer));
+    }
 
     @BeforeAll
     public static void setUpClass() {
