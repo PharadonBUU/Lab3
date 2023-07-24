@@ -95,6 +95,13 @@ public class XoTest {
         String currentPlayer = "X";
         assertEquals(true, OXProgram.checkWin(table, currentPlayer));
     }
+    
+    @Test
+    public void testCheckWinDiagonalFromTopLeftBY_X_output_true() {
+        String[] table = {"X", "X", "3", "O", "X", "O", "7", "O", "X"};
+        String currentPlayer = "X";
+        assertEquals(true, OXProgram.checkWin(table, currentPlayer));
+    }
 
     @BeforeAll
     public static void setUpClass() {
